@@ -7,7 +7,7 @@
 body{
     background: #56baed;
 }
-.select-box, .play-board{
+.select-box, .play-board, .result-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,6 +63,9 @@ body{
 .options button.playerO{
     margin-left: 5px;
 }
+.play-board{
+    display: none;
+}
 .play-board .details{
     background: #fff;
     padding: 7px;
@@ -71,17 +74,32 @@ body{
 .play-board .details .players{
     display: flex;
     width: 100%;
+    position: relative;
     justify-content: space-between;
 }
 .play-board .details span{
     width: 100%;
-    color:#56baed
+    color:#56baed;
     borde-radius: 5px;
     padding: 7px 0;
     font-size: 19px;
     font-weight: 500;
     cursor: default;
     text-align: center;
+    position: relative;
+}
+.details span:first-child{
+    color: #fff;
+}
+.details .slider{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #56baed;
+    border-radius: 5px;
+    z-index: 2;
 }
 .details span.active{
     color: #fff;
@@ -105,4 +123,39 @@ body{
     line-height: 80px;
     color: greenyellow;
 }
+.result-box{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+}
+.result-box .won-text{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.result-box .won-text p{
+    font-weight: 600;
+    margin: 0 3px;
+}
+.result-box .btn{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.result-box .btn button{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background: #56baed;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
  
